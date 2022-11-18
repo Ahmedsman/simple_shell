@@ -31,7 +31,6 @@ list_t *add_node(list_t **head, const char *str, int num)
 	new_head->next = *head;
 	*head = new_head;
 	return (new_head);
-
 }
 
 /**
@@ -48,11 +47,12 @@ list_t *add_node_end(list_t **head, const char *str, int num)
 
 	if (!head)
 		return (NULL);
+
 	node = *head;
 	new_node = malloc(sizeof(list_t));
 	if (!new_node)
 		return (NULL);
-	_memset((void *)new_node, 0, sizeof(list_t))
+	_memset((void *)new_node, 0, sizeof(list_t));
 	new_node->num = num;
 	if (str)
 	{
@@ -73,6 +73,7 @@ list_t *add_node_end(list_t **head, const char *str, int num)
 		*head = new_node;
 	return (new_node);
 }
+
 
 /**
  * print_list_str - prints only the str element of a list_t linked list
@@ -99,8 +100,7 @@ size_t print_list_str(const list_t *h)
  * @head: address of pointer to first node
  * @index: index of node to delete
  *
- *Return: 1 on success, 0 on failure
-
+ * Return: 1 on success, 0 on failure
  */
 int delete_node_at_index(list_t **head, unsigned int index)
 {

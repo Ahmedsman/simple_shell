@@ -6,6 +6,7 @@
  *
  * Return: 1 if freed, otherwise 0.
  */
+
 int bfree(void **ptr)
 {
 	if (ptr && *ptr)
@@ -14,5 +15,6 @@ int bfree(void **ptr)
 		*ptr = NULL;
 		return (1);
 	}
+
 	return (0);
 }
